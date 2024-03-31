@@ -40,3 +40,5 @@
 - [x] Accessible components
 - [x] Prevention of adding empty tasks
 - [x] Design responsive
+- [ ] Add options:
+ - [ ] option to enable/disable task complete sound

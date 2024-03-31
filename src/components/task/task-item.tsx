@@ -7,6 +7,7 @@ import { useListTasks } from "@/hooks/useTaskList";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 
+import { completeSound } from "@/lib/utils";
 interface TasksProps {
   task: Task;
 }
@@ -16,7 +17,8 @@ export function TaskItem({ task: { id, done, description } }: TasksProps) {
   const [removeFromList, setTaskStatus] = useListTasks((state) => [state.removeTaskFromList, state.setTaskStatus]);
 
   function handleCheckedChange() {
-    setTaskCheck(!taskCheck);
+    setTaskCheck(!taskCheck)
+    if(!taskCheck) completeSound.play();
     setTaskStatus(id);
   }
 
