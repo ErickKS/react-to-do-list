@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        layer: "url('./layer.png')",
+        layer: "url('/layer.png')",
       },
       colors: {
         border: "hsl(var(--border))",
